@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://pixeldenz.store", // ← Replace with your domain
-  generateRobotsTxt: true, // (optional) Generate robots.txt too
+  siteUrl: "https://pixeldenz.store",
+  generateRobotsTxt: true,
   sitemapSize: 5000,
+  output: "public",
 };
