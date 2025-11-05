@@ -8,9 +8,9 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pixeldenz - Premium Template for $1",
+  title: "Pixeldenz - Website Template for $1",
   description:
-    "Get a fully-featured, modern Next.js template with Tailwind CSS for just $1. Built with Next.js 14, fully responsive, and ready to customize.",
+    "Get a production-ready, code-based website template for only $1. Fully responsive, well-structured, and designed to be easily customized for any project.",
   icons: {
     icon: [
       {
