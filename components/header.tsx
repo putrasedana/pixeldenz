@@ -33,7 +33,7 @@ export function Header() {
           >
             <div className="relative h-8 w-8">
               <Image
-                src="/logo-pixeldenz.png"
+                src="/favicon.png"
                 alt="Pixeldenz Logo"
                 fill
                 className="object-contain"
