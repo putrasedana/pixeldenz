@@ -13,26 +13,16 @@ export const metadata: Metadata = {
   description:
     "Get a production-ready, code-based website template for only $1. Fully responsive, well-structured, and designed to be easily customized for any project.",
   keywords: [
-    "$1 website template",
+    "Buy $1 website template",
     "Pixeldenz store",
     "Code-based website template under $5",
     "Best cheap website templates for small businesses",
     "Static site templates for developers",
   ],
   icons: {
-    icon: [
-      {
-        url: "/logo-pixeldenz.png",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/logo-pixeldenz.png",
-        type: "image/png",
-      },
-    ],
-    shortcut: ["/logo-pixeldenz.png"],
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
@@ -44,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo-pixeldenz.png" type="image/png" />
+        <link rel="icon" href="/favicon.png" sizes="any" />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-BX5WYL3MSM`}

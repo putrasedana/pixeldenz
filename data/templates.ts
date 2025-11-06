@@ -24,7 +24,7 @@ export const featuredTemplates: Template[] = [
     gumroadUrl: "https://yourgumroad.com/bakery-template-a01",
     whatsappUrl:
       "https://wa.me/6285600488795?text=Hi! I want to buy the Bakery Template A01",
-    techStack: ["react.webp", "tailwind.png"],
+    techStack: ["react.webp", "tailwind.webp"],
   },
   {
     id: "bakery-template-a02",
@@ -36,7 +36,7 @@ export const featuredTemplates: Template[] = [
     gumroadUrl: "https://yourgumroad.com/bakery-template-a02",
     whatsappUrl:
       "https://wa.me/6285600488795?text=Hi! I want to buy the Bakery Template A02",
-    techStack: ["react.webp", "tailwind.png"],
+    techStack: ["react.webp", "tailwind.webp"],
   },
   {
     id: "coffeeshop-template-a01",
@@ -48,7 +48,7 @@ export const featuredTemplates: Template[] = [
     gumroadUrl: "https://yourgumroad.com/coffeeshop-template-a01",
     whatsappUrl:
       "https://wa.me/6285600488795?text=Hi! I want to buy the Coffeeshop Template A01",
-    techStack: ["react.webp", "tailwind.png"],
+    techStack: ["react.webp", "tailwind.webp"],
   },
   {
     id: "gym-template-a01",
@@ -60,7 +60,7 @@ export const featuredTemplates: Template[] = [
     gumroadUrl: "https://yourgumroad.com/gym-template-a01",
     whatsappUrl:
       "https://wa.me/6285600488795?text=Hi! I want to buy the Gym Template A01",
-    techStack: ["react.webp", "tailwind.png"],
+    techStack: ["react.webp", "tailwind.webp"],
   },
   {
     id: "restaurant-template-a01",
@@ -72,7 +72,7 @@ export const featuredTemplates: Template[] = [
     gumroadUrl: "https://yourgumroad.com/restaurant-template-a01",
     whatsappUrl:
       "https://wa.me/6285600488795?text=Hi! I want to buy the Restaurant Template A01",
-    techStack: ["react.webp", "tailwind.png"],
+    techStack: ["react.webp", "tailwind.webp"],
   },
   {
     id: "portfolio-template-a01",
@@ -85,6 +85,6 @@ export const featuredTemplates: Template[] = [
     whatsappUrl:
       "https://wa.me/6285600488795?text=Hi! I want to buy the Portfolio Template A01",
     featured: true,
-    techStack: ["html.webp", "tailwind.webp", "javascript.png"],
+    techStack: ["html.webp", "tailwind.webp", "javascript.webp"],
   },
 ];
