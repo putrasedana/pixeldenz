@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+// @ts-ignore
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
   title: "Pixeldenz - Website Template for $1",
   description:
     "Get a production-ready, code-based website template for only $1. Fully responsive, well-structured, and designed to be easily customized for any project.",
+  keywords: [
+    "$1 website template",
+    "Pixeldenz store",
+    "Code-based website template under $5",
+    "Best cheap website templates for small businesses",
+    "Static site templates for developers",
+  ],
   icons: {
     icon: [
       {
@@ -37,6 +45,20 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo-pixeldenz.png" type="image/png" />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-BX5WYL3MSM`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BX5WYL3MSM');
+    `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

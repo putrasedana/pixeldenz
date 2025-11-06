@@ -7,7 +7,14 @@ import { TemplateCard } from "@/components/TemplateCard";
 export const metadata: Metadata = {
   title: "Template Details - Pixeldenz",
   description:
-    "Detailed overview of the Pixeldenz Next.js template features, technology stack, and what's included.",
+    "Detailed overview of the Pixeldenz website template features, technology stack, and what's included.",
+  keywords: [
+    // Short-tail keywords
+    "Pixeldenz template details and showcase",
+
+    // Long-tail keywords
+    "detailed overview of pixeldenz website template features",
+  ],
 };
 
 export default function TemplatePage() {

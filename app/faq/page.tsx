@@ -9,8 +9,15 @@ import {
 
 export const metadata: Metadata = {
   title: "FAQ - Pixeldenz",
-  description:
-    "Frequently asked questions about the Pixeldenz Next.js template.",
+  description: "Frequently asked questions about the Pixeldenz templates.",
+  keywords: [
+    // Short-tail keywords
+    "Pixeldenz FAQ",
+    "Pixeldenz support",
+
+    // Long-tail keywords
+    "frequently asked questions about Pixeldenz website templates",
+  ],
 };
 
 export default function FAQPage() {

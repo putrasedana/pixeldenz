@@ -1,11 +1,19 @@
-import Link from "next/link";
 import { Check, X } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "License - Pixeldenz",
   description:
-    "License terms and usage rights for the Pixeldenz Next.js template.",
+    "License terms and usage rights for the Pixeldenz website template.",
+  keywords: [
+    // Short-tail keywords
+    "Pixeldenz license",
+
+    // Long-tail keywords
+    "license terms and conditions for Pixeldenz website template",
+    "usage rights for purchasing Pixeldenz web template",
+    "what you can and cannot do with Pixeldenz template",
+  ],
 };
 
 export default function LicensePage() {

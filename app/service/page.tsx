@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: "Services - Pixeldenz",
   description:
     "Professional template setup, customization, and hosting services. Let's discuss your requirements and budget.",
+  keywords: [
+    // Short-tail keywords
+    "website setup services",
+    "template customization",
+    "Pixeldenz services",
+    "Next.js template setup",
+    "website hosting service",
+    "React website customization",
+
+    // Long-tail keywords
+    "professional Next.js template setup and customization service",
+    "affordable website setup and hosting for Pixeldenz templates",
+    "hire developer to customize Next.js website template",
+    "custom website design and deployment services for startups",
+    "end-to-end template customization and deployment support",
+    "get help setting up your Pixeldenz web template",
+    "Next.js website hosting and optimization service",
+    "personalized website customization based on your budget",
+    "fast and reliable template installation service",
+    "custom React and Next.js template modification service",
+  ],
 };
 
 export default function ServicePage() {
