@@ -73,6 +73,8 @@ export function Header() {
 
           {/* Hamburger Button (Mobile) */}
           <button
+            type="button"
+            title="menu button"
             className="md:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-200/20 transition"
             onClick={() => setOpen(!open)}
           >
