@@ -176,21 +176,27 @@ export default function ServicePage() {
           </div>
 
           {/* CALL TO ACTION */}
-          <div className="mt-16 text-center space-y-4">
+          {/* <div className="mt-16 text-center space-y-4">
             <p className="text-muted-foreground">Want to see our work first?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/templates">
-                <button className="inline-flex items-center justify-center px-6 py-3 font-medium border rounded-lg hover:bg-accent transition-colors">
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center px-6 py-3 font-medium border rounded-lg hover:bg-accent transition-colors"
+                >
                   View Templates
                 </button>
               </Link>
               <Link href="/portfolio">
-                <button className="inline-flex items-center justify-center px-6 py-3 font-medium border rounded-lg hover:bg-accent transition-colors">
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center px-6 py-3 font-medium border rounded-lg hover:bg-accent transition-colors"
+                >
                   See Portfolio
                 </button>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -224,7 +230,10 @@ export default function ServicePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:scale-105 rounded-lg transition-all shadow-lg hover:shadow-xl">
+              <button
+                type="button"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:scale-105 rounded-lg transition-all shadow-lg hover:shadow-xl"
+              >
                 Chat on WhatsApp
               </button>
             </Link>

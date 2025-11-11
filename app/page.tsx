@@ -20,13 +20,20 @@ export default function Home() {
               coffee... but way cheaper.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Link href="/template">
-                <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 text-white bg-blue-600 rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105">
+              <Link href="/template" className="w-full sm:w-auto">
+                <button
+                  type="button"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 text-white bg-blue-600 rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                >
                   View Template
                 </button>
               </Link>
-              <Link href="/service">
-                <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 hover:bg-blue-600 text-white rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105">
+
+              <Link href="/service" className="w-full sm:w-auto">
+                <button
+                  type="button"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 hover:bg-blue-600 text-white rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                >
                   View Service
                 </button>
               </Link>
@@ -94,18 +101,21 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Templates
+              Latest Templates
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our handcrafted templates designed to kickstart your next
-              project with style and efficiency.
+              Discover fresh, professionally designed templates to help you
+              launch your website quickly and beautifully.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {featuredTemplates.map((template) => (
-              <TemplateCard key={template.id} template={template} />
-            ))}
+            {featuredTemplates
+              .slice(-6)
+              .reverse()
+              .map((template) => (
+                <TemplateCard key={template.id} template={template} />
+              ))}
           </div>
         </div>
       </section>
