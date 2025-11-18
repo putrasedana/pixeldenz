@@ -116,4 +116,32 @@ export const featuredTemplates: Template[] = [
     featured: true,
     techStack: ["react.webp", "tailwind.webp"],
   },
+  {
+    id: "portfolio-template-a02",
+    name: "Portfolio Template A02",
+    description:
+      "An easy-to-customize template ideal for students who need a professional online presence.",
+    price: 1,
+    image: "/assets/portfolio-template-a02.png",
+    demoUrl: "https://portfolio-template-a02.netlify.app",
+    gumroadUrl: "https://pixeldenz.gumroad.com/l/PortfolioTemplateA02",
+    whatsappUrl:
+      "https://wa.me/6285600488795?text=Hi! I want to buy the Portfolio Template A02",
+    featured: true,
+    techStack: ["vue.png", "tailwind.webp"],
+  },
+  {
+    id: "property-template-a01",
+    name: "Property Template A01",
+    description:
+      "Modern real estate template with property listings, agent profiles, and contact features.",
+    price: 1,
+    image: "/assets/property-template-a01.png",
+    demoUrl: "https://property-template-a01.netlify.app",
+    gumroadUrl: "https://pixeldenz.gumroad.com/l/PropertyTemplateA01",
+    whatsappUrl:
+      "https://wa.me/6285600488795?text=Hi! I want to buy the Property Template A01",
+    featured: true,
+    techStack: ["svelte.png", "tailwind.webp"],
+  },
 ];
