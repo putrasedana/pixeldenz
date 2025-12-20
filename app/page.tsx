@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = false;
+
 async function getTemplates() {
   return await fetchFeaturedTemplates();
 }

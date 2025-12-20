@@ -5,6 +5,8 @@ import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = false;
+
 async function getTemplates() {
   return await fetchTemplates();
 }

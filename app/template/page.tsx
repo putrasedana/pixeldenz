@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   keywords: ["Pixeldenz templates", "Next.js website templates for $1"],
 };
 
+export const revalidate = false;
+
 async function getTemplates() {
   return await fetchTemplates();
 }

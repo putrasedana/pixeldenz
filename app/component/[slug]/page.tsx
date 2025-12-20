@@ -5,6 +5,8 @@ import { fetchComponents } from "@/lib/supabase/data-fetching";
 import { Component } from "@/types/database";
 import BackButton from "@/components/BackButton";
 
+export const revalidate = false;
+
 async function getComponents() {
   return await fetchComponents();
 }

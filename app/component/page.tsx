@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   ],
 };
 
+export const revalidate = false;
+
 async function getComponents() {
   return await fetchComponents();
 }
