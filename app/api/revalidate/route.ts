@@ -1,14 +1,14 @@
-// app/api/revalidate/route.ts
 import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
-  const secret = req.headers.get("x-revalidate-secret");
+export async function POST(request: Request) {
+  const secret = request.headers.get("x-revalidate-secret");
 
   if (secret !== process.env.REVALIDATE_SECRET) {
-    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    return new NextResponse("Invalid secret", { status: 401 });
   }
 
+  // Revalidate pages
   revalidatePath("/");
   revalidatePath("/templates");
   revalidatePath("/components");
