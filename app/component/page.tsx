@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export const revalidate = false;
+export const dynamic = "force-dynamic";
 
 async function getComponents() {
   return await fetchComponents();

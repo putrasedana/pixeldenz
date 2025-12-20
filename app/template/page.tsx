@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: ["Pixeldenz templates", "Next.js website templates for $1"],
 };
 
-export const revalidate = false;
+export const dynamic = "force-dynamic";
 
 async function getTemplates() {
   return await fetchTemplates();

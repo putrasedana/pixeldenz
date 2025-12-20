@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = false;
+export const dynamic = "force-dynamic";
 
 async function getTemplates() {
   return await fetchFeaturedTemplates();
