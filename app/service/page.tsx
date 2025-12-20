@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Check, Shield, Settings, Globe } from "lucide-react";
+import {
+  Shield,
+  Settings,
+  Globe,
+  Brush,
+  Wrench,
+  DollarSign,
+} from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,25 +14,9 @@ export const metadata: Metadata = {
   description:
     "Professional template setup, customization, and hosting services. Let's discuss your requirements and budget.",
   keywords: [
-    // Short-tail keywords
-    "website setup services",
-    "template customization",
     "Pixeldenz services",
-    "Next.js template setup",
-    "website hosting service",
-    "React website customization",
-
-    // Long-tail keywords
-    "professional Next.js template setup and customization service",
-    "affordable website setup and hosting for Pixeldenz templates",
-    "hire developer to customize Next.js website template",
-    "custom website design and deployment services for startups",
-    "end-to-end template customization and deployment support",
-    "get help setting up your Pixeldenz web template",
-    "Next.js website hosting and optimization service",
-    "personalized website customization based on your budget",
-    "fast and reliable template installation service",
-    "custom React and Next.js template modification service",
+    "Next.js template setup services",
+    "Professional Next.js template setup and customization service",
   ],
 };
 
@@ -35,207 +26,122 @@ export default function ServicePage() {
       icon: Settings,
       title: "Template Setup",
       description:
-        "We'll set up the template with your data, content, and branding.",
+        "We set up the template using your text, images, and branding.",
     },
     {
-      icon: Check,
-      title: "Custom Editing",
-      description:
-        "Modify the template to match your specific requirements and preferences.",
+      icon: Brush,
+      title: "Design Tweaks",
+      description: "We adjust colors, layout, and style to match your look.",
+    },
+    {
+      icon: Wrench,
+      title: "Extra Features",
+      description: "We add special features or functions you need.",
     },
     {
       icon: Globe,
       title: "Hosting & Domain",
-      description:
-        "Optional hosting with a custom domain name, or use your existing setup.",
+      description: "We can provide hosting and a domain, or use your own.",
+    },
+    {
+      icon: Shield,
+      title: "Professional Quality",
+      description: "Clean, fast, and well-built for long-term use.",
+    },
+    {
+      icon: DollarSign,
+      title: "Flexible Pricing",
+      description: "Prices that fit your budget and project size.",
     },
   ];
 
   const process = [
-    "Contact us via WhatsApp to discuss your requirements.",
-    "We'll provide a customized quote based on your needs.",
-    "Once agreed, we start the setup and customization.",
-    "We deliver your fully functional website.",
+    "Message us on WhatsApp to share what you need.",
+    "We send you a simple quote based on your request.",
+    "After you agree, we start working on your website.",
+    "We finish and deliver your ready-to-use website.",
   ];
 
   return (
     <div className="flex flex-col">
       {/* HERO SECTION */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-background to-secondary/20 border-b-2 border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+      <section className="py-24 md:py-32 bg-gradient-to-b from-background to-secondary/20 border-b border-gray-800">
+        <div className="max-w-6xl mx-auto px-4 text-center space-y-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
             Professional <span className="text-primary">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Let us handle the technical setup while you focus on your business.
+            High‑quality setup, customization, and hosting for your Next.js
+            templates.
           </p>
         </div>
       </section>
 
-      {/* MAIN SERVICE DETAILS */}
-      <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {/* LEFT: Main Service Card */}
-            <div className="lg:col-span-2">
-              <div className="bg-card border rounded-2xl p-8 md:p-10 shadow-lg space-y-10">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div>
-                    <h2 className="text-3xl font-bold mb-2">
-                      Template Setup Services
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Complete setup, customization, and hosting solutions.
-                    </p>
-                  </div>
-                  <div className="text-left md:text-right">
-                    <div className="text-2xl font-bold text-primary">
-                      Custom Pricing
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Based on requirements
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <h3 className="font-semibold text-lg">
-                    Our Services Include:
-                  </h3>
-                  <div className="grid gap-4">
-                    {services.map((service, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start gap-4 p-4 rounded-lg border bg-background/50 hover:shadow-md transition-shadow"
-                      >
-                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                          <service.icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold mb-1">
-                            {service.title}
-                          </h4>
-                          <p className="text-muted-foreground text-sm">
-                            {service.description}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="border-t pt-8">
-                  <Link
-                    href="https://wa.me/6285600488795?text=Hi!%20I'm%20interested%20in%20your%20template%20setup%20services."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all shadow-lg hover:shadow-xl"
-                  >
-                    Discuss on WhatsApp
-                  </Link>
-                  <p className="text-center text-sm text-muted-foreground mt-4">
-                    Let&apos;s discuss your requirements and budget.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT: Highlights */}
-            <div className="space-y-6">
-              {[
-                {
-                  icon: Settings,
-                  title: "Custom Work",
-                  desc: "Tailored to your specific needs.",
-                },
-                {
-                  icon: Shield,
-                  title: "Professional Quality",
-                  desc: "Clean code and best practices.",
-                },
-                {
-                  icon: Check,
-                  title: "Flexible Pricing",
-                  desc: "Matched to your budget and goals.",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-card border rounded-xl p-6 flex items-start gap-4 hover:shadow-md transition-shadow"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <item.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CALL TO ACTION */}
-          {/* <div className="mt-16 text-center space-y-4">
-            <p className="text-muted-foreground">Want to see our work first?</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/templates">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center px-6 py-3 font-medium border rounded-lg hover:bg-accent transition-colors"
-                >
-                  View Templates
-                </button>
-              </Link>
-              <Link href="/portfolio">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center px-6 py-3 font-medium border rounded-lg hover:bg-accent transition-colors"
-                >
-                  See Portfolio
-                </button>
-              </Link>
-            </div>
-          </div> */}
-        </div>
-      </section>
-
-      {/* PROCESS SECTION */}
-      <section className="py-20 md:py-28 bg-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
-            How It Works
+      {/* MAIN CONTENT */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold mb-8 sm:mb-10 md:mb-12">
+            What You Get
           </h2>
 
-          <div className="space-y-4">
-            {process.map((step, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
+            {services.map((service, i) => (
               <div
-                key={index}
-                className="flex items-start gap-4 p-4 rounded-lg bg-background border"
+                key={i}
+                className="flex items-start sm:items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-lg sm:rounded-xl border bg-background/40 hover:bg-background/60 transition-all duration-200"
               >
-                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-primary-foreground text-sm flex items-center justify-center font-bold">
-                  {index + 1}
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
-                <p className="text-muted-foreground">{step}</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-semibold text-base sm:text-lg mb-1 sm:mb-1.5">
+                    {service.title}
+                  </h4>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground mt-4 sm:mt-6 px-4">
+            Tell us your budget & needs — we will adjust the offer.
+          </p>
+        </div>
+      </section>
+      {/* PROCESS SECTION */}
+      <section className="py-24 bg-secondary/20 border-t border-gray-800">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold mb-8 sm:mb-10 md:mb-12">
+            How It Works
+          </h2>
+
+          <div className="space-y-5 text-left">
+            {process.map((step, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 p-5 rounded-xl bg-background border hover:bg-background/70 transition-all"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm flex items-center justify-center font-bold">
+                  {i + 1}
+                </div>
+                <p className="text-muted-foreground text-base">{step}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
             <p className="text-lg text-muted-foreground mb-6">
-              Ready to get started? Contact us today to discuss your project!
+              Ready to Elevate Your Digital Presence?
             </p>
             <Link
               href="https://wa.me/6285600488795?text=Hi!%20I'm%20interested%20in%20your%20template%20setup%20services."
               target="_blank"
               rel="noopener noreferrer"
+              className="block w-full text-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-all shadow-lg hover:shadow-xl"
             >
-              <button
-                type="button"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:scale-105 rounded-lg transition-all shadow-lg hover:shadow-xl"
-              >
-                Chat on WhatsApp
-              </button>
+              WhatsApp us now!
             </Link>
           </div>
         </div>

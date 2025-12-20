@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
-// @ts-ignore
+"use client";
+
+import { usePathname } from "next/navigation";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
@@ -8,29 +9,25 @@ import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
-export const metadata: Metadata = {
-  title: "Pixeldenz - Website Template for $1",
-  description:
-    "Get a production-ready, code-based website template for only $1. Fully responsive, well-structured, and designed to be easily customized for any project.",
-  keywords: [
-    "Buy $1 website template",
-    "Pixeldenz store",
-    "Code-based website template under $5",
-    "Best cheap website templates for small businesses",
-    "Static site templates for developers",
-  ],
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
-};
+const PAGES_WITHOUT_LAYOUT = [
+  "/offer", // Special offer
+  "/promo", // Promotional page
+  "/landing", // Generic landing
+  "/checkout", // Checkout page (if you have one)
+  "/thank-you", // Thank you page
+];
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  const shouldHideLayout = PAGES_WITHOUT_LAYOUT.some((path) =>
+    pathname?.startsWith(path)
+  );
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -42,20 +39,22 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BX5WYL3MSM');
-    `,
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BX5WYL3MSM');
+            `,
           }}
         />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen">
-            <Header />
+            {!shouldHideLayout && <Header />}
+
             <main className="flex-1">{children}</main>
-            <Footer />
+
+            {!shouldHideLayout && <Footer />}
           </div>
         </ThemeProvider>
       </body>

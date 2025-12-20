@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer className="border-t-2 border-gray-800 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-3">
             <Link
@@ -22,11 +22,11 @@ export function Footer() {
               <span className="font-bold text-xl">Pixeldenz</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Premium Website template for just $1.
+              Premium Next.js template for just $1.
             </p>
           </div>
 
-          <div>
+          <div className="xl:mx-auto">
             <h3 className="font-semibold mb-3">Product</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -34,7 +34,15 @@ export function Footer() {
                   href="/template"
                   className="hover:text-foreground transition-colors"
                 >
-                  Template Details
+                  Templates
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/component"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Free Components
                 </Link>
               </li>
               <li>
@@ -42,21 +50,13 @@ export function Footer() {
                   href="/service"
                   className="hover:text-foreground transition-colors"
                 >
-                  Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/license"
-                  className="hover:text-foreground transition-colors"
-                >
-                  License
+                  Setup Service
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
+          <div className="xl:mx-auto">
             <h3 className="font-semibold mb-3">Support</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -70,7 +70,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="xl:mx-auto">
             <h3 className="font-semibold mb-3">Legal</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>

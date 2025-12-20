@@ -1,29 +1,54 @@
 import Link from "next/link";
 import { Zap, Smartphone, Wrench, TrendingUp } from "lucide-react";
-import { featuredTemplates } from "@/data/templates";
 import { TemplateCard } from "@/components/TemplateCard";
+import { fetchFeaturedTemplates } from "@/lib/supabase/data-fetching";
+import { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Pixeldenz - Next.js Template for $1",
+  description:
+    "Get a production-ready, code-based website template for only $1. Fully responsive, well-structured, and designed to be easily customized for any project.",
+  keywords: [
+    "Pixeldenz store",
+    "Buy $1 Next.js website template",
+    "Best Next.js website templates for small businesses",
+    "Next.js templates and components for developers",
+    "Next.js website template setup and customization services",
+  ],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+};
+
+async function getTemplates() {
+  return await fetchFeaturedTemplates();
+}
+
+export default async function Home() {
+  const featuredTemplates = await getTemplates();
+
   return (
     <div className="flex flex-col">
-      <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 md:py-32 lg:py-40 bg-gradient-to-b from-background to-secondary/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-              The <span className="text-primary">$1 Website Template</span>
+            <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+              Professional{" "}
+              <span className="text-primary">Next.js Templates</span>
               <br />
-              That Doesn&apos;t Look Like It
+              for Only $1
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              A premium-quality template with modern design, responsive layout,
-              and everything you need to launch fast. For the price of a
-              coffee... but way cheaper.
+            <p className="text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Production‑ready Next.js templates with clean code, modern design,
+              and everything you need to launch fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link href="/template" className="w-full sm:w-auto">
                 <button
                   type="button"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 text-white bg-blue-600 rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 text-white bg-blue-600 rounded-lg transition-all shadow-lg hover:shadow-xl hover:bg-blue-700 hover:border-blue-700"
                 >
                   View Template
                 </button>
@@ -32,7 +57,7 @@ export default function Home() {
               <Link href="/service" className="w-full sm:w-auto">
                 <button
                   type="button"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 hover:bg-blue-600 text-white rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border-2 border-blue-600 text-white rounded-lg transition-all shadow-lg hover:shadow-xl hover:bg-blue-700 hover:border-blue-700"
                 >
                   View Service
                 </button>
@@ -43,7 +68,7 @@ export default function Home() {
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Everything You Need to Build Fast
@@ -54,17 +79,18 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center space-y-4 p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
+            <div className="text-center space-y-4 p-6 rounded-lg border border-gray-700 bg-card hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Blazing Fast</h3>
               <p className="text-muted-foreground">
-                Optimized for maximum performance and excellent SEO results
+                Built on Next.js 16 with App Router for optimal performance and
+                SEO
               </p>
             </div>
 
-            <div className="text-center space-y-4 p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
+            <div className="text-center space-y-4 p-6 rounded-lg border border-gray-700 bg-card hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                 <Smartphone className="h-6 w-6 text-primary" />
               </div>
@@ -74,17 +100,17 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="text-center space-y-4 p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
+            <div className="text-center space-y-4 p-6 rounded-lg border border-gray-700 bg-card hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                 <Wrench className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Easy to Customize</h3>
               <p className="text-muted-foreground">
-                Clean, well-structured code with Tailwind CSS and components
+                Clean, well-structured code with Tailwind CSS and UI components
               </p>
             </div>
 
-            <div className="text-center space-y-4 p-6 rounded-lg border bg-card hover:shadow-lg transition-shadow">
+            <div className="text-center space-y-4 p-6 rounded-lg border border-gray-700 bg-card hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                 <TrendingUp className="h-6 w-6 text-primary" />
               </div>
@@ -98,42 +124,51 @@ export default function Home() {
       </section>
 
       <section className="py-20 md:py-28 bg-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Latest Templates
+              Featured Templates
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover fresh, professionally designed templates to help you
-              launch your website quickly and beautifully.
+              Our hand-picked selection of premium templates to kickstart your
+              next project with style and functionality.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {featuredTemplates
-              .slice(-6)
-              .reverse()
-              .map((template) => (
+          {featuredTemplates.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {featuredTemplates.map((template) => (
                 <TemplateCard key={template.id} template={template} />
               ))}
-          </div>
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-lg text-muted-foreground">
+                No featured templates available at the moment.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-muted-foreground">
-              For just $1, you get access to a professional template that would
-              typically cost $30+. No subscriptions, no hidden fees.
+              For just $1, you get instant access to a professional Next.js
+              template that would typically cost $30+. No subscriptions, no
+              hidden fees.
             </p>
             <div className="pt-4">
               <Link href="/template">
-                <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105">
-                  View All Templates
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 rounded-lg transition-all shadow-lg hover:shadow-xl hover:bg-blue-700"
+                >
+                  Get the Template
                 </button>
               </Link>
             </div>

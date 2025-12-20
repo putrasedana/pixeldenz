@@ -6,13 +6,10 @@ export const metadata: Metadata = {
   description:
     "License terms and usage rights for the Pixeldenz website template.",
   keywords: [
-    // Short-tail keywords
     "Pixeldenz license",
-
-    // Long-tail keywords
-    "license terms and conditions for Pixeldenz website template",
-    "usage rights for purchasing Pixeldenz web template",
-    "what you can and cannot do with Pixeldenz template",
+    "License terms and conditions for Pixeldenz website template",
+    "Usage rights for purchasing Pixeldenz web template",
+    "What you can and cannot do with Pixeldenz template",
   ],
 };
 
@@ -37,7 +34,7 @@ export default function LicensePage() {
   return (
     <div className="flex flex-col">
       <section className="py-20 md:py-28 bg-gradient-to-b from-background to-secondary/20 border-b-2 border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               License <span className="text-primary">Terms</span>
@@ -50,7 +47,7 @@ export default function LicensePage() {
       </section>
 
       <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card border rounded-2xl p-8 md:p-10 mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
@@ -185,6 +182,16 @@ export default function LicensePage() {
                     The template is provided as-is without warranty of any kind.
                     We are not responsible for any damages resulting from the
                     use of this template.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">
+                    7. Updates
+                  </h4>
+                  <p>
+                    You will have access to any updates or improvements we make
+                    to the template. Updates are provided as-is and do not
+                    extend or modify these license terms.
                   </p>
                 </div>
               </div>

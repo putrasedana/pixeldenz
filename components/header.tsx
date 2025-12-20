@@ -18,6 +18,7 @@ export function Header() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/template", label: "Template" },
+    { href: "/component", label: "Component" },
     { href: "/service", label: "Service" },
     { href: "/faq", label: "FAQ" },
     { href: "/license", label: "License" },
@@ -25,7 +26,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b-2 border-gray-800 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
@@ -66,7 +67,10 @@ export function Header() {
             rel="noopener noreferrer"
             className="hidden md:inline-flex"
           >
-            <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
+            >
               Contact Us
             </button>
           </a>
@@ -105,7 +109,10 @@ export function Header() {
               rel="noopener noreferrer"
               className="block"
             >
-              <button className="w-full mt-2 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors">
+              <button
+                type="button"
+                className="w-full mt-2 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
+              >
                 Contact Us
               </button>
             </a>

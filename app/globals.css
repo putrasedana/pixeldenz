@@ -70,3 +70,173 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.empty-state-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Template cards animation */
+.template-card-animate {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+/* Staggered delays */
+.stagger-0 {
+  animation-delay: 0.05s;
+}
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.15s;
+}
+.stagger-3 {
+  animation-delay: 0.2s;
+}
+.stagger-4 {
+  animation-delay: 0.25s;
+}
+.stagger-5 {
+  animation-delay: 0.3s;
+}
+.stagger-6 {
+  animation-delay: 0.35s;
+}
+.stagger-7 {
+  animation-delay: 0.4s;
+}
+.stagger-8 {
+  animation-delay: 0.45s;
+}
+.stagger-9 {
+  animation-delay: 0.5s;
+}
+
+/* Empty state */
+.empty-state-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Custom prose styles for dark theme */
+.prose-invert {
+  color: #d1d5db;
+}
+
+.prose-invert a {
+  color: #3b82f6;
+}
+
+.prose-invert strong {
+  color: #ffffff;
+}
+
+.prose-invert ul > li::before {
+  background-color: #6b7280;
+}
+
+/* Component card animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.component-card-animate {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+/* Staggered delays */
+.stagger-0 {
+  animation-delay: 0.05s;
+}
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.15s;
+}
+.stagger-3 {
+  animation-delay: 0.2s;
+}
+.stagger-4 {
+  animation-delay: 0.25s;
+}
+.stagger-5 {
+  animation-delay: 0.3s;
+}
+.stagger-6 {
+  animation-delay: 0.35s;
+}
+.stagger-7 {
+  animation-delay: 0.4s;
+}
+.stagger-8 {
+  animation-delay: 0.45s;
+}
+.stagger-9 {
+  animation-delay: 0.5s;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

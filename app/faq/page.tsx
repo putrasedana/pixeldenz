@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import {
   Accordion,
@@ -11,12 +10,9 @@ export const metadata: Metadata = {
   title: "FAQ - Pixeldenz",
   description: "Frequently asked questions about the Pixeldenz templates.",
   keywords: [
-    // Short-tail keywords
     "Pixeldenz FAQ",
     "Pixeldenz support",
-
-    // Long-tail keywords
-    "frequently asked questions about Pixeldenz website templates",
+    "Frequently asked questions about Pixeldenz website templates",
   ],
 };
 
@@ -25,42 +21,52 @@ export default function FAQPage() {
     {
       question: "What do I get after purchasing?",
       answer:
-        "After purchase, you'll receive access to the complete template source code as a ZIP file. This includes all pages, components, styles, and configuration files. You can then set it up locally and customize it to fit your needs.",
+        "If you purchase through Gumroad, you'll receive instant access to download the full template ZIP file. If you prefer manual payment via WhatsApp, we will send the files directly to you once the payment is confirmed.",
     },
     {
       question: "What is the license?",
       answer:
-        "You receive a single-use license that allows you to use the template for personal projects or client work. You can modify and customize it freely. However, you cannot resell, redistribute, or share the template files. Each project/site requires one license.",
+        "You get a single-use license that allows you to use the template for personal or commercial projects, including client work. You are allowed to modify it freely. However, you may not resell, redistribute, or share the template files. Each final project requires one license.",
     },
     {
       question: "Is there support?",
       answer:
-        "While we don't offer dedicated support for the $1 price point, the code is well-documented and follows best practices. The template uses standard, widely-documented technologies (React, Next.js, Tailwind CSS) so you'll find plenty of community resources available.",
+        "Yes, basic support is available through WhatsApp for installation issues or questions. For customization or full setup, you can request the Professional Setup service. Even without support, the template is clean, organized, and easy to understand.",
     },
     {
       question: "What tech stack do I need to use this?",
       answer:
-        "You'll need Node.js (version 18 or higher) installed on your computer. The template uses Next.js 14, React 18, TypeScript, and Tailwind CSS. Basic knowledge of React and Next.js is recommended, but the clean code structure makes it beginner-friendly.",
+        "You'll need Node.js (version 18 or higher). The template uses Next.js (App Router), React, TypeScript, and Tailwind CSS. Basic knowledge of React/Next.js is recommended, but the structure is beginner-friendly.",
     },
     {
       question: "How do I customize the template?",
       answer:
-        "The template is built with customization in mind. Colors, fonts, and spacing use Tailwind CSS classes and CSS variables that can be easily modified. All components are modular and well-organized. Simply edit the Tailwind config for global styles, or modify individual components as needed.",
+        "All components are modular and use Tailwind CSS for styling. You can easily customize colors, fonts, spacing, and layout through Tailwind classes or the Tailwind config. Every part of the template is built to be editable and flexible.",
     },
     {
       question: "Can I use this for commercial projects?",
       answer:
-        "Yes! You can use this template for both personal and commercial projects, including client work. The only restriction is that you cannot resell or redistribute the template itself.",
+        "Yes! You can use the template for personal websites, client work, or business projects. The only restriction is that you cannot resell or share the template itself.",
+    },
+    {
+      question: "Does it work with the latest version of Next.js?",
+      answer:
+        "Yes. The template is built using the latest Next.js App Router and follows current best practices. It will continue receiving updates to stay compatible.",
     },
     {
       question: "Is the template responsive?",
       answer:
-        "Absolutely! Every component and page is fully responsive and mobile-first. The design looks great on smartphones, tablets, and desktop screens of all sizes.",
+        "Absolutely. Every page and component is fully responsive and mobile-first. The layout adapts beautifully to all screen sizes.",
     },
     {
       question: "Can I get a refund?",
       answer:
-        "Given the $1 price point and instant digital delivery nature of the product, we don't offer refunds. However, we encourage you to review the template details and preview pages before purchasing to ensure it meets your needs.",
+        "Because this is a low-cost digital product with instant delivery, refunds are not offered. Please check the preview and details before purchasing. If you have questions, feel free to contact us on WhatsApp first.",
+    },
+    {
+      question: "Will there be updates?",
+      answer:
+        "Yes. All buyers—whether via Gumroad or WhatsApp—receive free lifetime updates whenever improvements or compatibility fixes are released.",
     },
   ];
 
@@ -73,7 +79,7 @@ export default function FAQPage() {
               Frequently Asked <span className="text-primary">Questions</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Everything you need to know about the Pixeldenz template
+              Everything you need to know about the Pizeldenz template
             </p>
           </div>
         </div>
@@ -98,31 +104,6 @@ export default function FAQPage() {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-secondary/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Still Have Questions?
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              We’re here to help! If you didn’t find the answer you were looking
-              for, feel free to reach out.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Link
-                href="https://wa.me/6285600488795?text=Hi!%20I’m%20interested%20in%20your%20template%20and%20have%20some%20questions."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600  rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105">
-                  Chat on WhatsApp
-                </button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
