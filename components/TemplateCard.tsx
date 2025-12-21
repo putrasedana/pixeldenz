@@ -26,12 +26,10 @@ export function TemplateCard({ template }: TemplateCardProps) {
           <div className="flex items-center justify-between">
             {/* Title with character limit */}
             <h3
-              className="text-base truncate max-w-[70%]"
-              title={template.name} // Show full title on hover
+              className="text-base truncate max-w-[80%]"
+              title={template.name}
             >
-              {template.name.length > 30
-                ? `${template.name.substring(0, 30)}...`
-                : template.name}
+              {template.name}
             </h3>
 
             {/* Price - aligned inline with title */}
