@@ -250,7 +250,7 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({ templates }) 
                 key={template.id}
                 className={`transition-all duration-500 ease-in-out template-card-animate stagger-${index % 10}`}
               >
-                <TemplateCard template={template} />
+                <TemplateCard template={template} priority={index < 3} />
               </div>
             ))}
           </div>
