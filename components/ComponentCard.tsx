@@ -17,23 +17,18 @@ export function ComponentCard({ component }: ComponentCardProps) {
             src={component.previewImage}
             alt={component.name}
             fill
-            className="object-contain object-center"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-center"
           />
         </div>
 
         {/* Title and Badge Container */}
         <div className="p-4">
           <div className="flex items-center justify-between">
-            <h3
-              className="text-base font-semibold truncate max-w-[70%]"
-              title={component.name}
-            >
+            <h3 className="text-base font-semibold truncate max-w-[70%]" title={component.name}>
               {component.name}
             </h3>
-            <Badge
-              variant="secondary"
-              className="bg-blue-600/20 text-white rounded-sm text-sm font-normal capitalize"
-            >
+            <Badge variant="secondary" className="bg-blue-600/20 text-white rounded-sm text-sm font-normal capitalize">
               {component.category}
             </Badge>
           </div>

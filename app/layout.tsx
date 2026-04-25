@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -25,15 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </ThemeProvider>
 
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-BX5WYL3MSM" strategy="lazyOnload" />
-        <Script id="gtag-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-BX5WYL3MSM');
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-BX5WYL3MSM" />
       </body>
     </html>
   );
