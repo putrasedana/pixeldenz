@@ -8,9 +8,7 @@ interface FilterableComponentsProps {
   components: Component[];
 }
 
-const FilterableComponents: React.FC<FilterableComponentsProps> = ({
-  components,
-}) => {
+const FilterableComponents: React.FC<FilterableComponentsProps> = ({ components }) => {
   const [showCategoryFilters, setShowCategoryFilters] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 
@@ -33,9 +31,7 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
 
     // Filter by category
     if (selectedCategories.length > 0) {
-      filtered = filtered.filter((component) =>
-        selectedCategories.includes(component.category)
-      );
+      filtered = filtered.filter((component) => selectedCategories.includes(component.category));
     }
 
     return filtered;
@@ -44,9 +40,7 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
   // Toggle category selection
   const toggleCategory = (categoryName: string) => {
     setSelectedCategories((prev) =>
-      prev.includes(categoryName)
-        ? prev.filter((c) => c !== categoryName)
-        : [...prev, categoryName]
+      prev.includes(categoryName) ? prev.filter((c) => c !== categoryName) : [...prev, categoryName],
     );
   };
 
@@ -62,9 +56,7 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
         <div className="max-w-7xl mx-auto">
           {/* Header section - responsive layout */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-white">
-              Filter Components
-            </h3>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-white">Filter Components</h2>
 
             {/* Filter buttons - responsive container */}
             <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
@@ -95,15 +87,11 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
           {/* Category Filter Container - Smooth Animation */}
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              showCategoryFilters
-                ? "max-h-[500px] opacity-100 mt-4"
-                : "max-h-0 opacity-0 mt-0"
+              showCategoryFilters ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
             }`}
           >
             <div className="p-4 sm:p-6 bg-transparent border border-gray-700 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Select Categories
-              </h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Select Categories</h3>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {categories.map((category) => (
                   <button
@@ -151,11 +139,9 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
 
         {/* Results Count */}
         <div className="max-w-7xl mx-auto mb-6 transition-opacity duration-500">
-          <p className="text-gray-500 text-sm sm:text-base">
-            Showing{" "}
-            <span className="font-semibold">{filteredComponents.length}</span>{" "}
-            of <span className="font-semibold">{components.length}</span>{" "}
-            components
+          <p className="text-gray-300 text-sm sm:text-base">
+            Showing <span className="font-semibold">{filteredComponents.length}</span> of{" "}
+            <span className="font-semibold">{components.length}</span> components
           </p>
         </div>
 
@@ -165,9 +151,7 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
             {filteredComponents.map((component, index) => (
               <div
                 key={component.id}
-                className={`transition-all duration-500 ease-in-out component-card-animate stagger-${
-                  index % 10
-                }`}
+                className={`transition-all duration-500 ease-in-out component-card-animate stagger-${index % 10}`}
               >
                 <ComponentCard component={component} />
               </div>
@@ -191,9 +175,7 @@ const FilterableComponents: React.FC<FilterableComponentsProps> = ({
                 />
               </svg>
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
-              No components found
-            </h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">No components found</h3>
             <p className="text-gray-500 mb-6 max-w-md mx-auto px-4 text-sm sm:text-base">
               Try adjusting your filters to find what you&apos;re looking for
             </p>

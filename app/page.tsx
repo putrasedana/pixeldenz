@@ -35,14 +35,12 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-5xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-              Professional{" "}
-              <span className="text-primary">Next.js Templates</span>
+              Professional <span className="text-primary">Next.js Templates</span>
               <br />
               for Only $1
             </h1>
             <p className="text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Production‑ready Next.js templates with clean code, modern design,
-              and everything you need to launch fast.
+              Production‑ready Next.js templates with clean code, modern design, and everything you need to launch fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Link href="/template" className="w-full sm:w-auto">
@@ -70,9 +68,7 @@ export default async function Home() {
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Need to Build Fast
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything You Need to Build Fast</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Premium features without the premium price tag
             </p>
@@ -85,8 +81,7 @@ export default async function Home() {
               </div>
               <h3 className="text-xl font-semibold">Blazing Fast</h3>
               <p className="text-muted-foreground">
-                Built on Next.js 16 with App Router for optimal performance and
-                SEO
+                Built on Next.js 16 with App Router for optimal performance and SEO
               </p>
             </div>
 
@@ -95,9 +90,7 @@ export default async function Home() {
                 <Smartphone className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Fully Responsive</h3>
-              <p className="text-muted-foreground">
-                Looks perfect on every device, from mobile to desktop
-              </p>
+              <p className="text-muted-foreground">Looks perfect on every device, from mobile to desktop</p>
             </div>
 
             <div className="text-center space-y-4 p-6 rounded-lg border border-gray-700 bg-card hover:shadow-lg transition-shadow">
@@ -105,9 +98,7 @@ export default async function Home() {
                 <Wrench className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Easy to Customize</h3>
-              <p className="text-muted-foreground">
-                Clean, well-structured code with Tailwind CSS and UI components
-              </p>
+              <p className="text-muted-foreground">Clean, well-structured code with Tailwind CSS and UI components</p>
             </div>
 
             <div className="text-center space-y-4 p-6 rounded-lg border border-gray-700 bg-card hover:shadow-lg transition-shadow">
@@ -115,9 +106,7 @@ export default async function Home() {
                 <TrendingUp className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">SEO Ready</h3>
-              <p className="text-muted-foreground">
-                Optimized for search engines with proper meta tags and structure
-              </p>
+              <p className="text-muted-foreground">Optimized for search engines with proper meta tags and structure</p>
             </div>
           </div>
         </div>
@@ -126,26 +115,22 @@ export default async function Home() {
       <section className="py-20 md:py-28 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Templates
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Templates</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our hand-picked selection of premium templates to kickstart your
-              next project with style and functionality.
+              Our hand-picked selection of premium templates to kickstart your next project with style and
+              functionality.
             </p>
           </div>
 
           {featuredTemplates.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {featuredTemplates.map((template) => (
-                <TemplateCard key={template.id} template={template} />
+              {featuredTemplates.map((template, index) => (
+                <TemplateCard key={template.slug} template={template} priority={index < 3} />
               ))}
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-lg text-muted-foreground">
-                No featured templates available at the moment.
-              </p>
+              <p className="text-lg text-muted-foreground">No featured templates available at the moment.</p>
             </div>
           )}
         </div>
@@ -154,13 +139,10 @@ export default async function Home() {
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Ready to Get Started?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Ready to Get Started?</h2>
             <p className="text-xl text-muted-foreground">
-              For just $1, you get instant access to a professional Next.js
-              template that would typically cost $30+. No subscriptions, no
-              hidden fees.
+              For just $1, you get instant access to a professional Next.js template that would typically cost $30+. No
+              subscriptions, no hidden fees.
             </p>
             <div className="pt-4">
               <Link href="/template">

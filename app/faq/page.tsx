@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "FAQ - Pixeldenz",
   description: "Frequently asked questions about the Pixeldenz templates.",
-  keywords: [
-    "Pixeldenz FAQ",
-    "Pixeldenz support",
-    "Frequently asked questions about Pixeldenz website templates",
-  ],
+  keywords: ["Pixeldenz FAQ", "Pixeldenz support", "Frequently asked questions about Pixeldenz website templates"],
 };
 
 export default function FAQPage() {
@@ -78,9 +69,7 @@ export default function FAQPage() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               Frequently Asked <span className="text-primary">Questions</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Everything you need to know about the Pizeldenz template
-            </p>
+            <p className="text-xl text-muted-foreground">Everything you need to know about the Pizeldenz template</p>
           </div>
         </div>
       </section>
@@ -90,11 +79,7 @@ export default function FAQPage() {
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="bg-card border rounded-lg px-6"
-                >
+                <AccordionItem key={index} value={`item-${index}`} className="bg-card border rounded-lg px-6">
                   <AccordionTrigger className="text-left hover:no-underline py-5">
                     <span className="font-semibold pr-4">{faq.question}</span>
                   </AccordionTrigger>

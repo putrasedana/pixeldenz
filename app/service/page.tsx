@@ -1,12 +1,5 @@
 import Link from "next/link";
-import {
-  Shield,
-  Settings,
-  Globe,
-  Brush,
-  Wrench,
-  DollarSign,
-} from "lucide-react";
+import { Shield, Settings, Globe, Brush, Wrench, DollarSign } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,8 +18,7 @@ export default function ServicePage() {
     {
       icon: Settings,
       title: "Template Setup",
-      description:
-        "We set up the template using your text, images, and branding.",
+      description: "We set up the template using your text, images, and branding.",
     },
     {
       icon: Brush,
@@ -71,8 +63,7 @@ export default function ServicePage() {
             Professional <span className="text-primary">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            High‑quality setup, customization, and hosting for your Next.js
-            templates.
+            High‑quality setup, customization, and hosting for your Next.js templates.
           </p>
         </div>
       </section>
@@ -94,12 +85,8 @@ export default function ServicePage() {
                   <service.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-base sm:text-lg mb-1 sm:mb-1.5">
-                    {service.title}
-                  </h4>
-                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                  <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-1.5">{service.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -132,9 +119,7 @@ export default function ServicePage() {
           </div>
 
           <div className="mt-12">
-            <p className="text-lg text-muted-foreground mb-6">
-              Ready to Elevate Your Digital Presence?
-            </p>
+            <p className="text-lg text-muted-foreground mb-6">Ready to Elevate Your Digital Presence?</p>
             <Link
               href="https://wa.me/6285600488795?text=Hi!%20I'm%20interested%20in%20your%20template%20setup%20services."
               target="_blank"

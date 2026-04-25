@@ -8,14 +8,10 @@ interface FilterableTemplatesProps {
   templates: Template[];
 }
 
-const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
-  templates,
-}) => {
+const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({ templates }) => {
   const [showCategoryFilters, setShowCategoryFilters] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [priceFilter, setPriceFilter] = useState<"all" | "free" | "paid">(
-    "all"
-  );
+  const [priceFilter, setPriceFilter] = useState<"all" | "free" | "paid">("all");
 
   // Extract categories from template names
   const categories = useMemo(() => {
@@ -62,9 +58,7 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
 
   const toggleCategory = (categoryName: string) => {
     if (selectedCategories.includes(categoryName)) {
-      setSelectedCategories(
-        selectedCategories.filter((c) => c !== categoryName)
-      );
+      setSelectedCategories(selectedCategories.filter((c) => c !== categoryName));
     } else {
       setSelectedCategories([...selectedCategories, categoryName]);
     }
@@ -87,8 +81,7 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
     }
   };
 
-  const hasActiveFilters =
-    selectedCategories.length > 0 || priceFilter !== "all";
+  const hasActiveFilters = selectedCategories.length > 0 || priceFilter !== "all";
 
   return (
     <section>
@@ -97,9 +90,7 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
           {/* Header section - responsive layout */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
             <div className="flex items-center justify-between sm:justify-start">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white">
-                Filter Templates
-              </h3>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-white">Filter Templates</h2>
 
               {/* Clear All Filters Button - Mobile only (right side) */}
               <div className="lg:hidden">
@@ -176,15 +167,11 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
           {/* Category Filter Container - Smooth Animation */}
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              showCategoryFilters
-                ? "max-h-[500px] opacity-100 mt-4"
-                : "max-h-0 opacity-0 mt-0"
+              showCategoryFilters ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"
             }`}
           >
             <div className="p-4 sm:p-6 bg-transparent border border-gray-700 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Select Categories
-              </h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Select Categories</h3>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {categories.map((category) => (
                   <button
@@ -248,9 +235,8 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
 
         {/* Results Count */}
         <div className="max-w-7xl mx-auto mb-6 transition-opacity duration-500">
-          <p className="text-gray-500 text-sm sm:text-base">
-            Showing{" "}
-            <span className="font-semibold">{filteredTemplates.length}</span> of{" "}
+          <p className="text-gray-300 text-sm sm:text-base">
+            Showing <span className="font-semibold">{filteredTemplates.length}</span> of{" "}
             <span className="font-semibold">{templates.length}</span> templates
             {priceFilter !== "all" && ` (${priceFilter})`}
           </p>
@@ -262,9 +248,7 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
             {filteredTemplates.map((template: Template, index) => (
               <div
                 key={template.id}
-                className={`transition-all duration-500 ease-in-out template-card-animate stagger-${
-                  index % 10
-                }`}
+                className={`transition-all duration-500 ease-in-out template-card-animate stagger-${index % 10}`}
               >
                 <TemplateCard template={template} />
               </div>
@@ -288,9 +272,7 @@ const FilterableTemplates: React.FC<FilterableTemplatesProps> = ({
                 />
               </svg>
             </div>
-            <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-2">
-              No templates found
-            </h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-2">No templates found</h3>
             <p className="text-gray-500 mb-6 max-w-md mx-auto px-4 text-sm sm:text-base">
               Try adjusting your filters to find what you&apos;re looking for
             </p>
