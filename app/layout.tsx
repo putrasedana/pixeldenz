@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { ThemeProvider } from "next-themes";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -25,7 +25,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </ThemeProvider>
 
-        <GoogleAnalytics gaId="G-BX5WYL3MSM" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-BX5WYL3MSM" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BX5WYL3MSM');
+          `}
+        </Script>
       </body>
     </html>
   );
